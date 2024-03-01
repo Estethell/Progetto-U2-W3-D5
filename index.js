@@ -6,6 +6,7 @@ const brandCard = document.querySelectorAll(".brandCard");
 const priceCard = document.querySelectorAll(".priceCard");
 const btnMod = document.querySelectorAll(".btnMod");
 const btnFind = document.querySelectorAll(".btnFind");
+const card = document.querySelectorAll(".card");
 
 fetch(url, {
   method: "GET",
@@ -45,6 +46,13 @@ fetch(url, {
 
     btnFind.forEach((x, i) => {
       x.href = "./dettagli.html?id=" + prodotti[i]._id;
+    });
+
+    card.forEach((i) => {
+      if (i.querySelector("h4").innerText === "Nome") {
+        console.log(i.querySelector("h4").innerText);
+        i.remove();
+      }
     });
   })
   .catch((errore) => console.log(errore));

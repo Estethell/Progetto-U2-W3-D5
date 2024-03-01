@@ -122,7 +122,7 @@ window.onload = () => {
     });
     btnReset.addEventListener("click", () => {
       delitto();
-      handleReset();
+      window.location.replace("./index.html");
     });
   } else {
     btnSubmit.addEventListener("click", () => {

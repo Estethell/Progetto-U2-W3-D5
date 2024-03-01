@@ -27,12 +27,12 @@ const getFetch = () => {
       descrizione.classList.add("border", "border-2", "p-5", "rounded-4", "border-info");
       let nome = document.createElement("h2");
       nome.innerText = object.name;
-      nome.classList.add("text-danger");
+      nome.classList.add("text-danger", "my-4");
       let brand = document.createElement("h4");
-      brand.innerText = object.brand;
+      brand.innerText = "Marchio: " + object.brand;
       let price = document.createElement("p");
-      price.innerText = object.price + "€";
-      price.classList.add("font-monospace");
+      price.innerText = "Prezzo: " + object.price + "€";
+      price.classList.add("font-monospace", "my-4");
 
       cardBody.appendChild(img);
       cardBody.appendChild(nome);
